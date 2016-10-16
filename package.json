@@ -1,6 +1,9 @@
 {
   "name": "electron-react-app",
   "productName": "Demo App",
+  "description": "Demo App description",
+  "license": "MIT",
+  "repository": "https://github.com/FrantisekGazo/electron-react-app",
   "version": "0.1.0",
   "main": "electron-compile-init.js",
   "scripts": {
@@ -12,12 +15,11 @@
     "pack": "run-s clean-cache compile package-linux package-win clean-source",
     "pack-linux": "cross-env NODE_ENV=production ./node_modules/.bin/electron-packager . DemoApp --out=dist --version=1.4.3 --platform=linux --arch=all --overwrite --ignore=\".idea|.compilerc|.gitignore|cleaner.js\"",
     "pack-win": "cross-env NODE_ENV=production ./node_modules/.bin/electron-packager . DemoApp --out=dist --version=1.4.3 --platform=win32 --arch=all --overwrite --ignore=\".idea|.compilerc|.gitignore|cleaner.js\"",
-    "pack-for-this": "cross-env NODE_ENV=production ./node_modules/.bin/electron-packager . DemoApp --out=dist --version=1.4.3 --overwrite --ignore=\".idea|.compilerc|.gitignore|cleaner.js\"",
-    "quick-pack": "run-s clean-cache compile pack-for-this clean-source"
+    "pack-mac": "cross-env NODE_ENV=production ./node_modules/.bin/electron-packager . DemoApp --out=dist --version=1.4.3 --overwrite --ignore=\".idea|.compilerc|.gitignore|cleaner.js\"",
+    "quick-pack": "run-s clean-cache compile pack-mac clean-source"
   },
   "devDependencies": {
     "cross-env": "^3.1.2",
-    "electron": "^1.4.3",
     "electron-compilers": "^4.0.1",
     "electron-packager": "^8.1.0",
     "npm-run-all": "^3.1.0",

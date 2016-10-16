@@ -6,23 +6,8 @@ import { doSomething } from "../actions"
 import Header from "./Header"
 
 
-const mapStateToProps = (store) => {
-    return {
-        data: store.data
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        run: () => {
-            dispatch(doSomething())
-        }
-    }
-}
-
-//@connect(mapStateToProps, mapDispatchToProps)
-//export default class Layout extends React.Component {
 class Layout extends React.Component {
+
     constructor() {
         super();
 
@@ -88,4 +73,19 @@ class Layout extends React.Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Layout)
+export default connect(
+    // state to props
+    (state) => {
+        return {
+            data: state.data
+        }
+    },
+    // dispatch functions to props
+    (dispatch) => {
+        return {
+            run: () => {
+                dispatch(doSomething())
+            }
+        }
+    }
+)(Layout)
