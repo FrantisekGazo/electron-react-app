@@ -3,10 +3,10 @@ import ReactDOM from "react-dom"
 import { Provider } from 'react-redux'
 import { Router, Route, IndexRoute, hashHistory } from "react-router"
 
-import ContentA from "./screen/ContentA"
-import ContentB from "./screen/ContentB"
-import ContentDefault from "./screen/ContentDefault"
-import Layout from "./screen/Layout"
+import ContentA from "./components/ContentA"
+import ContentB from "./components/ContentB"
+import ContentDefault from "./components/ContentDefault"
+import Layout from "./components/Layout"
 import store from './rendererStore'
 
 ReactDOM.render(

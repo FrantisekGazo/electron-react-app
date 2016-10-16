@@ -3,7 +3,7 @@ import { Link } from "react-router"
 import { connect } from "react-redux"
 import { doSomething } from "../actions"
 
-import Header from "../components/Header"
+import Header from "./Header"
 
 
 const mapStateToProps = (store) => {
