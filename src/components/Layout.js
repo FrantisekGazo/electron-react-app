@@ -77,7 +77,7 @@ export default connect(
     // state to props
     (state) => {
         return {
-            data: state.data
+            data: state.project.data
         }
     },
     // dispatch functions to props

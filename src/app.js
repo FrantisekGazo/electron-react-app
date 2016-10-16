@@ -7,7 +7,7 @@ import ContentA from "./components/ContentA"
 import ContentB from "./components/ContentB"
 import ContentDefault from "./components/ContentDefault"
 import Layout from "./components/Layout"
-import store from './rendererStore'
+import store from './store/renderer'
 
 ReactDOM.render(
     <Provider store={store}>

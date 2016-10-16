@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from 'electron'
 
 // initialize store in MAIN process
-import mainStore from './mainStore'
+import store from './store/main'
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

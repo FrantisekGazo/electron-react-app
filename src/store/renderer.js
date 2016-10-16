@@ -1,7 +1,9 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import { electronEnhancer } from 'redux-electron-store'
-import reducers from './reducers'
+import reducers from '../reducers'
 
+
+let filter = true
 
 let enhancer
 if (process.env.NODE_ENV === 'development') {
@@ -9,12 +11,12 @@ if (process.env.NODE_ENV === 'development') {
 
     enhancer = compose(
         applyMiddleware(logger()),
-        electronEnhancer(true)
+        electronEnhancer(filter)
     )
 } else { // production
     enhancer = compose(
-        electronEnhancer(true)
+        electronEnhancer(filter)
     )
 }
 
-export default createStore(reducers, {}, enhancer)
+export default createStore(reducers, enhancer)
