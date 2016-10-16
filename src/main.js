@@ -29,6 +29,11 @@ function createMainWindow() {
         // when you should delete the corresponding element.
         mainWindow = null
     })
+
+    // prevents the need to put title inside html file
+    mainWindow.on('page-title-updated', function (event) {
+        event.preventDefault()
+    })
 }
 
 // This method will be called when Electron has finished
