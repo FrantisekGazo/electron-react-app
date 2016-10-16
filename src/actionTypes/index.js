@@ -1,0 +1,3 @@
+export let MAIN_ACTIONS = {
+    DO_SOMETHING: 'DO_SOMETHING',
+}
