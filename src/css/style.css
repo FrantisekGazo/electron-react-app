@@ -1,0 +1,19 @@
+body {
+  background: #d5d5d5;
+  padding: 16px;
+}
+
+.start-center-txt {
+  margin: auto;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.start-center-txt:hover {
+  font-weight: bold;
+}
+
+button {
+  padding: 8px;
+}
