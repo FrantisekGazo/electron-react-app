@@ -14,6 +14,7 @@ class Layout extends React.Component {
         return (
             <div>
                 <Link to="setup"><button>START</button></Link>
+                <Link to="plot"><button>PLOT</button></Link>
                 <button onClick={this.navigateToDefault.bind(this)}>BACK</button>
 
                 {this.props.children}
