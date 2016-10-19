@@ -50,6 +50,10 @@ class Plot extends React.Component {
         this.drawPlot()
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.xData != nextProps.xData || this.props.yData != nextProps.yData
+    }
+
     render() {
         return (
             <div id="plot"></div>
