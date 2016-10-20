@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 
 import Plot from "./Plot"
+import Button from "./Button"
 
 
 class PlotScreen extends React.Component {
@@ -68,7 +69,7 @@ class PlotScreen extends React.Component {
 
         return (
             <div>
-                <button onClick={this.showChart.bind(this)}>Show chart</button>
+                <Button onClick={this.showChart.bind(this)}>Show chart</Button>
 
                 { selectedInfoElement }
                 { chartElement }
