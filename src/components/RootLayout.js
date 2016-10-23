@@ -1,23 +1,25 @@
 import React from "react"
-import { Link } from "react-router"
 import { connect } from "react-redux"
+
+import PlotScreen from "./PlotScreen"
+import SetupScreen from "./SetupScreen"
+import StartScreen from "./StartScreen"
 
 
 class Layout extends React.Component {
 
-    navigateToDefault() {
-        console.log(this)
-        this.props.history.replace("/")
-    }
-
     render() {
+        let content
+        if (this.props.selectedProject) {
+            content = (<SetupScreen/>)
+        } else {
+            content = (<StartScreen/>)
+        }
+
         return (
             <div>
-                <Link to="setup"><button>START</button></Link>
-                <Link to="plot"><button>PLOT</button></Link>
-                <button onClick={this.navigateToDefault.bind(this)}>BACK</button>
-
-                {this.props.children}
+                {content}
+                <PlotScreen/>
             </div>
         )
     }
@@ -27,6 +29,7 @@ export default connect(
     // state to props
     (state) => {
         return {
+            selectedProject: state.project.path
         }
     },
     // dispatch functions to props

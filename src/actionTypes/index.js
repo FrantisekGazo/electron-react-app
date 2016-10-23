@@ -1,3 +1,9 @@
+export const PROJECT_ACTIONS = {
+    OPEN: 'OPEN_PROJECT',
+    OPEN_ERROR: 'OPEN_PROJECT_ERROR',
+    CLOSE: 'CLOSE_PROJECT',
+}
+
 export let MAIN_ACTIONS = {
     DO_SOMETHING: 'DO_SOMETHING',
 }

@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, dialog } from 'electron'
 
 // initialize store in MAIN process
 import store from './store/main'
@@ -6,6 +6,15 @@ import store from './store/main'
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+
+exports.createProjectDir = function(callback) {
+    if (mainWindow) {
+        // mainWindow is your instance of BrowserWindow
+        dialog.showOpenDialog(mainWindow, {
+            properties: ['openDirectory']
+        }, callback)
+    }
+}
 
 function createMainWindow() {
     // Create the browser window.
